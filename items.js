@@ -1,6 +1,6 @@
 var items = {
   title: "Product is Served",
-  description: "What if real-world services behaved like digital products? <br>Created by <a href='https://www.linkedin.com/in/ghenriques/'>Gonçalo Henriques</a>",
+  description: "What if real-world services behaved like digital products? <br>Created by <a href='https://www.linkedin.com/in/ghenriques/' target='_blank'><u>Gonçalo Henriques</u></a>",
   social: [
       {
         icon: "fa-instagram",
@@ -77,7 +77,7 @@ function loadPosts(posts){
 function loadSocial(social){
   var res = "";
   $.each(social, function(key, item){
-    res += '<a href="'+item.link+'" class="fa '+item.icon+'" alt="'+item.alt+'"></a>';
+    res += '<a href="'+item.link+'" target="_blank" class="fa '+item.icon+'" alt="'+item.alt+'"></a>';
   })
   return res;
 }
@@ -86,7 +86,7 @@ function loadButtons(buttons){
   var res = "";
   $.each(buttons, function(key, button){
     res += '<div style="padding-bottom: 30px;">'+
-        '<button onclick="location.href=\''+button.link+'\'" type="button" class="btn btn-outline-light" style="width: 80%; padding-top:10px; padding-bottom:10px; font-weight: 600;">'+button.name+'</button>'+
+        '<a href="'+button.link+'" type="button" target="_blank" class="btn btn-outline-light" style="width: 80%; padding-top:10px; padding-bottom:10px; font-weight: 600;">'+button.name+'</a>'+
     '</div>';
   })
   return res;
