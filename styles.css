@@ -10,15 +10,15 @@ body {
 }
 
 a:link {
-  color: white;
+  color: black;
 	/* text-decoration: underline; */
 }
 
 @media all and (min-width: 991px){
  ._profile{
-   position: fixed;
-	 top: 0px;
-	 height: 100%;
+   /* position: fixed; */
+	 /* top: 0px; */
+	 /* height: 100%; */
  }
 }
 
@@ -37,17 +37,17 @@ a:link {
 
 /* visited link */
 a:visited {
-  color: white;
+  color: black;
 }
 
 /* mouse over link */
 a:hover {
-  color: white;
+  color: black;
 }
 
 /* selected link */
 a:active {
-  color: white;
+  color: black;
 }
 
 @-webkit-keyframes Gradient {
@@ -119,13 +119,31 @@ h6 {
   }
 
   .backdrop {
-	  -moz-box-shadow: 0px 6px 5px #111;
+	  /* -moz-box-shadow: 0px 6px 5px #111;
 	  -webkit-box-shadow: 0px 6px 5px #111;
-	  box-shadow: 0px 2px 10px #111;
+	  box-shadow: 0px 2px 10px #111; */
 	  -moz-border-radius:190px;
 	  -webkit-border-radius:190px;
 	  border-radius:190px;
   }
+
+	.shadow {
+		-moz-box-shadow: 0px 6px 5px #111;
+		-webkit-box-shadow: 0px 6px 5px #111;
+		box-shadow: 0px 2px 10px #111;
+	}
+
+	.box {
+		padding-top: 30px;
+		margin-top: 30px;
+		background: white;
+		color: black;
+		border-radius: 5px;
+	}
+
+	.card {
+		border: solid 1px black !important;
+	}
 
   .profilepic {
 	  width: 120px;

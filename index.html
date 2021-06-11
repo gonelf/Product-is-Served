@@ -18,19 +18,20 @@
       <div class="col-lg-6 col-12">
         <div class="_profile">
 
-          <div class="text-center" style="padding-top: 30px; padding-bottom: 30px;">
+          <div class="text-center box shadow" style="">
             <img class="backdrop profilepic">
-            <h2 style="color: #ffffff; padding-top: 20px;">{{title}}</h2>
-            <p style="color: #ffffff;">{{description}}</p>
+            <h2 style="padding-top: 20px;">{{title}}</h2>
+            <p style="">{{description}}</p>
             <p>{{social}}</p>
           </div>
           <div class="text-center">
 
           </div>
-          <div class="text-center">
+          <div class="text-center box shadow">
               {{buttons}}
           </div>
-          <div class="text-center d-none d-lg-block">
+          <iframe src='https://ko-fi.com/productisserved/?hidefeed=true&widget=true&embed=true&preview=true' class="box shadow" style='border:none;width:100%;padding:4px;background:#f9f9f9;' height='712' title='productisserved'></iframe>
+          <div class="text-center d-none d-lg-block p-4">
             Powered by @gonelf. Get yours.<br>
             <a href="https://twitter.com/intent/tweet?screen_name=gonelf&ref_src=twsrc%5Etfw" style="color: #34312f;" class="twitter-mention-button" data-text="Hi! Make me an artsy bio too." data-show-count="false"></a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
           </div>
@@ -40,7 +41,7 @@
 
 
     <div class="container"> -->
-      <div class="col-lg-6 col-12">
+      <div class="col-lg-6 col-12 box shadow" style="margin-bottom: 30px; padding-top: 0px;">
         {{posts}}
       </div>
       <!-- <div class="col-xs-12">
@@ -77,6 +78,35 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <script src="./items.js"></script>
+    <script type="text/javascript">
+    window.addEventListener('scroll',sticky,false);
+			/* NEW LINE OF CODE BELOW */
+			window.addEventListener('wheel',sticky,false);
+
+    function sticky() {
+      // console.log($("._profile").height() - $(window).scrollTop());
+      // // console.log($("._profile").height());
+      // console.log($(window).height());
+      // console.log($(window).width());
+       if($("._profile").height() - $(window).scrollTop() < $(window).height() && $(window).width() > 991) {
+           // alert("bottom!");
+           // console.log("bottom");
+           // var dif = $(window).scrollTop() + $("._profile").height() - $(document).height();
+           // console.log(dif);
+           let width = $("._profile").width();
+           $("._profile").css("top", "");
+           $("._profile").css("position", "fixed");
+           $("._profile").css("bottom", "0px");
+           $("._profile").css("width", width+"px");
+           // $("._profile").unbind('scroll');
+       }
+       else {
+         $("._profile").css("bottom", "");
+         $("._profile").css("position", "relative");
+         $("._profile").css("top", "0px");
+       }
+      }
+    </script>
 </body>
 
 </html>

@@ -25,11 +25,31 @@ var items = {
     {
       title: "Signup is Served",
       images: [
+        "./pics/pic5.JPG",
         "./pics/pic1.JPG",
         "./pics/pic2.JPG",
         "./pics/pic3.JPG",
-        "./pics/pic4.JPG",
-        "./pics/pic5.JPG"
+        "./pics/pic4.JPG"
+      ]
+    },
+    {
+      title: "Guided tutorial is Served",
+      images: [
+        "./pics/webcomics.jpg",
+        "./pics/webcomics (1).jpg",
+        "./pics/webcomics (2).jpg",
+        "./pics/webcomics (3).jpg",
+        "./pics/webcomics (4).jpg"
+      ]
+    },
+    {
+      title: "reCaptcha is Served",
+      images: [
+        "./pics/pis3_1.jpg",
+        "./pics/pis3_2.jpg",
+        "./pics/pis3_3.jpg",
+        "./pics/pis3_4.jpg",
+        "./pics/pis3_5.jpg"
       ]
     }
   ]
@@ -37,7 +57,7 @@ var items = {
 function makeCarrousel(title, indicators, pics){
   return ''+
   '<div class="card mt-4 mb-4">'+
-  '<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">'+
+  '<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="false">'+
   // '<ol class="carousel-indicators">'+
   // indicators+
   // '</ol>'+
@@ -86,7 +106,7 @@ function loadButtons(buttons){
   var res = "";
   $.each(buttons, function(key, button){
     res += '<div style="padding-bottom: 30px;">'+
-        '<a href="'+button.link+'" type="button" target="_blank" class="btn btn-outline-light" style="width: 80%; padding-top:10px; padding-bottom:10px; font-weight: 600;">'+button.name+'</a>'+
+        '<a href="'+button.link+'" type="button" target="_blank" class="btn btn-outline-dark" style="width: 80%; padding-top:10px; padding-bottom:10px; font-weight: 600;">'+button.name+'</a>'+
     '</div>';
   })
   return res;
