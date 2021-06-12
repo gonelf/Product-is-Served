@@ -9,7 +9,7 @@ function populate(data) {
   $.each(posts, function(key, value){
     id = value.node.shortcode;
     console.log(id);
-    $(container).append(post(id));
+    $(IGcontainer).append(post(id));
   });
   addScript('//www.instagram.com/embed.js');
 
@@ -23,7 +23,7 @@ function addScript(scr, callback){
   return callback();
 }
 
-function loadIGFeed(IGName, container){
+function loadIGFeed(IGName){
   // $.instagramFeed({
   new InstagramFeed({
     'username': IGName,
